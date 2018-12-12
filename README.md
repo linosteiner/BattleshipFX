@@ -9,7 +9,11 @@ A Java + JavaFX implementation of the classic board game "Battleship"
 [UseCase Beschreibung](https://docs.google.com/document/d/10ijdML6Y6XOtydqBtZ_nphd_b47O7SOK_iY8Vwr1NCI/edit?usp=sharing
 "Beschreibung zu den Use Cases")  
 [UseCase Diagramm](https://drive.google.com/file/d/199WMOtVvBNjvwDS5SWq2u4UJc7dVKH8c/view?usp=sharing
-"Use Case Diagramm")
+"Use Case Diagramm")  
+[Klassendigramm](https://drive.google.com/file/d/1VjvlcC0vA4dkV-ipR0O46TYg3VcLP83A/view?usp=sharing
+"Klassendigramm")
+
+
 
 
 
