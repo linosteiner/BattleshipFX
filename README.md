@@ -11,7 +11,11 @@ A Java + JavaFX implementation of the classic board game "Battleship"
 [UseCase Diagramm](https://drive.google.com/file/d/199WMOtVvBNjvwDS5SWq2u4UJc7dVKH8c/view?usp=sharing
 "Use Case Diagramm")  
 [Klassendigramm](https://drive.google.com/file/d/1VjvlcC0vA4dkV-ipR0O46TYg3VcLP83A/view?usp=sharing
-"Klassendigramm")
+"Klassendigramm")  
+[ERD](https://drive.google.com/file/d/1Oz3okvbsUxKfbUM4B62lISFKIi_pR83n/view?usp=sharing
+"ERD")  
+[MockUp](https://drive.google.com/file/d/1zKFQt4EhCSTsOf8Va0BJV5vuaBUDqKRR/view?usp=sharing
+"MockUp")
 
 
 
