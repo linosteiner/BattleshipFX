@@ -11,9 +11,19 @@ public class FieldCreator {
         this.stage = stage;
     }
 
-    public GridPane createField(int n){
+    public GridPane createField(int h, int v){
 
         GridPane pane = new GridPane();
+
+        for (int i = 0; i < v ; i++) {
+
+            for (int j = 0; j < h ; j++) {
+
+            }
+
+        }
+
+
 
 
 
