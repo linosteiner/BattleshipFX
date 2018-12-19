@@ -12,7 +12,7 @@ public class Main extends Application {
 
         FieldCreator creator = new FieldCreator(primaryStage);
 
-        Parent root = FXMLLoader.load(getClass().getResource("controller.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("frontend/controller.fxml"));
         primaryStage.setTitle("BattleshipFX");
         primaryStage.setScene(new Scene(root, 600, 400));
 
