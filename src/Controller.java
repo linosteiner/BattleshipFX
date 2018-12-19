@@ -1,5 +1,3 @@
-package frontend;
-
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 
