@@ -27,7 +27,10 @@ public class Connector {
     public void openConnection()
     {
         try {
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost/meldungen", "root", "");
+            if(this.con == null || this.con.isClosed()) {
+                this.con = DriverManager.getConnection("jdbc:mysql://localhost/schneeger", "root", "");
+                System.out.println("Connect success!");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -36,11 +39,13 @@ public class Connector {
     public void closeConnection()
     {
         try {
-            this.con.close();
+            if(this.con != null || !this.con.isClosed()) {
+                this.con.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }
+
 
