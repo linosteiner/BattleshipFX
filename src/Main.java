@@ -1,3 +1,4 @@
+import frontend.FieldCreator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,9 +9,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("controller.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        FieldCreator creator = new FieldCreator(primaryStage);
+
+        Parent root = FXMLLoader.load(getClass().getResource("frontend/controller.fxml"));
+        primaryStage.setTitle("BattleshipFX");
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
