@@ -15,19 +15,19 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("frontend/controller.fxml"));
         Parent root = loader.load();
         controller = loader.getController();
+
         creator = new FieldCreator(primaryStage, controller);
+
+        primaryStage.setTitle("BattleshipFX");
+        Scene scene = new Scene(root, 600, 400);
 
         creator.createField(10,10);
 
-        //Parent root = FXMLLoader.load(getClass().getResource("frontend/controller.fxml"));
-        primaryStage.setTitle("BattleshipFX");
-        primaryStage.setScene(new Scene(root, 600, 400));
-
-
-
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

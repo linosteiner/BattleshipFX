@@ -1,52 +1,54 @@
 package frontend;
 
 import javafx.fxml.FXML;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 public class Controller {
 
     @FXML
-    private GridPane field1;
+    private Pane field1;
 
     @FXML
-    private GridPane field2;
+    private Pane field2;
 
     @FXML
-    private GridPane legend1;
+    private Pane legend1;
 
     @FXML
-    private GridPane legend2;
+    private Pane legend2;
 
 
-    public GridPane getField1() {
+    public Pane getField1() {
         return field1;
     }
 
-    public void setField1(GridPane field1) {
-        this.field1 = field1;
+    public void setField1(Pane newField) {
+        field1.getChildren().clear();
+        field1.getChildren().add(newField);
     }
 
-    public GridPane getField2() {
+    public Pane getField2() {
         return field2;
     }
 
-    public void setField2(GridPane field2) {
-        this.field2 = field2;
+    public void setField2(Pane newField) {
+        field2.getChildren().clear();
+        field2.getChildren().add(newField);
     }
 
-    public GridPane getLegend1() {
+    public Pane getLegend1() {
         return legend1;
     }
 
-    public void setLegend1(GridPane legend1) {
+    public void setLegend1(Pane legend1) {
         this.legend1 = legend1;
     }
 
-    public GridPane getLegend2() {
+    public Pane getLegend2() {
         return legend2;
     }
 
-    public void setLegend2(GridPane legend2) {
+    public void setLegend2(Pane legend2) {
         this.legend2 = legend2;
     }
 }

@@ -1,6 +1,8 @@
 package frontend;
 
 
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -11,6 +13,9 @@ public class FieldCreator {
 
     private Stage stage;
     private Controller controller;
+    private Scene scene;
+
+
 
     public FieldCreator(Stage stage, Controller controller) throws IOException {
         this.stage = stage;
@@ -19,23 +24,25 @@ public class FieldCreator {
 
     public void createField(int h, int v){
 
-        GridPane pane = new GridPane();
+        GridPane pane1 = new GridPane();
+        GridPane pane2 = new GridPane();
 
         for (int i = 0; i < v ; i++) {
 
             for (int j = 0; j < h ; j++) {
 
-                Button button = new Button("X");
-                button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+                Button button1 = new Button("X");
+                button1.setPrefWidth(20.0);
+                pane1.add(button1,i,j);
 
-                pane.add(button,i,j);
-
+                Button button2 = new Button("X");
+                button2.setPrefWidth(20.0);
+                pane2.add(button2,i,j);
             }
-
         }
 
-        controller.setField1(pane);
-        controller.setField2(pane);
+        controller.setField1(pane1);
+        controller.setField2(pane2);
 
     }
 
