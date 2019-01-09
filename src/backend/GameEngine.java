@@ -2,6 +2,7 @@ package backend;
 
 import frontend.Controller;
 import frontend.FieldCreator;
+import javafx.scene.Scene;
 
 public class GameEngine {
 
@@ -13,6 +14,7 @@ public class GameEngine {
     private Player player2;
     private Field field1;
     private Field field2;
+
 
     public GameEngine(Controller controller, FieldCreator creator) {
         this.controller = controller;
@@ -34,10 +36,14 @@ public class GameEngine {
 
     private void selectPlayer1(){
 
-
+        //TODO: Choose or create Player 1
+        player1 = new Player("Hans");
     }
 
     private void selectPlayer2(){
+
+        //TODO: Choose or create Player 2
+        player2 = new Player("Fritz");
 
     }
 
@@ -47,13 +53,28 @@ public class GameEngine {
         creator.setHeight(10);
         creator.setWidth(10);
 
+
     }
 
     private void createField1(){
 
+        //TODO: Create Field in Backend
+        field1 = new Field(creator.getWidth(), creator.getHeight());
+
+
+
+        //GUI
+        creator.createGUIFields(player1);
+
     }
 
     private void createField2(){
+
+        //TODO: Create Field in Backend
+
+
+        //GUI
+        creator.createGUIFields(player2);
 
     }
 
