@@ -2,7 +2,6 @@ package frontend;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
 public class Controller {
