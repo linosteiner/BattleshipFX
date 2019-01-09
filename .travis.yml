@@ -1,7 +1,9 @@
 language: java
 jdk: oraclejdk8
 
-
+deploy:
+  provider: releases
+  file: target/battleshipfx.jar
 
 cache:
   directories:
