@@ -3,7 +3,7 @@ package backend;
 public class Ship {
 
     private String name;
-    private boolean sunken;
+    private Boolean sunken;
     private Tile[] tiles;
 
     public Ship(String name) {
