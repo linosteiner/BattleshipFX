@@ -16,8 +16,3 @@ A Java + JavaFX implementation of the classic board game "Battleship"
 "ERD")  
 [MockUp](https://drive.google.com/file/d/1zKFQt4EhCSTsOf8Va0BJV5vuaBUDqKRR/view?usp=sharing
 "MockUp")
-
-
-
-
-
