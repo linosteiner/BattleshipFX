@@ -15,5 +15,17 @@ public class Master {
     public Master(FieldCreator creator, Controller controller) {
         this.creator = creator;
         this.controller = controller;
+
+        gameEngine = new GameEngine(controller, creator);
+        ranking = new Ranking();
+    }
+
+
+    public void play(){
+
+    }
+
+    public void showRanking(){
+
     }
 }

@@ -12,6 +12,8 @@ public class FieldCreator {
     private Stage stage;
     private Controller controller;
     private Scene scene;
+    private int height;
+    private int width;
 
 
 
@@ -45,4 +47,19 @@ public class FieldCreator {
     }
 
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
 }
