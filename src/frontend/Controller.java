@@ -1,6 +1,8 @@
 package frontend;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
 public class Controller {
@@ -50,5 +52,10 @@ public class Controller {
 
     public void setLegend2(Pane legend2) {
         this.legend2 = legend2;
+    }
+
+    @FXML
+    private void close(){
+        Platform.exit();
     }
 }
