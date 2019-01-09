@@ -1,5 +1,4 @@
 # BattleshipFX
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dd1a2f329a1546f5ae15cc19b91fc861)](https://app.codacy.com/app/beeric1/BattleshipFX?utm_source=github.com&utm_medium=referral&utm_content=linosteiner/BattleshipFX&utm_campaign=Badge_Grade_Settings)
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/linosteiner/BattleshipFX.svg?columns=all&style=flat-square)](https://waffle.io/linosteiner/BattleshipFX)  
 A Java + JavaFX implementation of the classic board game "Battleship"
 
