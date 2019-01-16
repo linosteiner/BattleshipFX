@@ -2,8 +2,16 @@ package frontend;
 
 import backend.GameEngine;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.util.Pair;
+
+import java.util.Optional;
 
 public class Controller {
 
@@ -88,9 +96,80 @@ public class Controller {
     @FXML
     private void diffCustom(){
 
+        Dialog<Pair<String, String>> dialog = new Dialog<>();
+        dialog.setTitle("Custom difficulty");
+
+        // Set the button types.
+        ButtonType loginButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
+
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+        gridPane.setPadding(new Insets(20, 150, 10, 10));
+
+
+        TextField from = createTextField();
+        TextField to = createTextField();
+
+        gridPane.add(from, 0, 0);
+        gridPane.add(new Label("x"), 1, 0);
+        gridPane.add(to, 2, 0);
+
+        dialog.getDialogPane().setContent(gridPane);
+
+        // Request focus on the username field by default.
+        Platform.runLater(from::requestFocus);
+
+        // Convert the result to a username-password-pair when the login button is clicked.
+        dialog.setResultConverter(dialogButton -> {
+            if (dialogButton == loginButtonType) {
+                return new Pair<>(from.getText(), to.getText());
+            }
+            return null;
+        });
+
+        Optional<Pair<String, String>> result = dialog.showAndWait();
+
+
+        //Convert Pair (String to int)
+        if(result.isPresent()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error ");
+            alert.setHeaderText("Number format error");
+            alert.setContentText("Only numbers between 1 and 15 allowed");
+
+            try {
+                int h = Integer.parseInt(result.get().getKey());
+                int w = Integer.parseInt(result.get().getValue());
+
+                if(h > 0 && h < 16 && w > 0 && w < 16){
+                    engine.chooseDifficulty(h,w);
+                }else {
+                    alert.showAndWait();
+                }
+            }catch (NumberFormatException n){
+
+                alert.showAndWait();
+            }
+        }
+
     }
 
-
+    private TextField createTextField() {
+        TextField textField = new TextField();
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    textField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+        return textField;
+    }
 
 
 }
