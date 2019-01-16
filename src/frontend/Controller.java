@@ -70,4 +70,27 @@ public class Controller {
         engine.newGame();
     }
 
+    @FXML
+    private void diffEasy(){
+        engine.chooseDifficulty(8,8);
+    }
+
+    @FXML
+    private void diffMedium(){
+        engine.chooseDifficulty(12,12);
+    }
+
+    @FXML
+    private void diffHard(){
+        engine.chooseDifficulty(15,15);
+    }
+
+    @FXML
+    private void diffCustom(){
+
+    }
+
+
+
+
 }

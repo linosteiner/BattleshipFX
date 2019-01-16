@@ -20,7 +20,7 @@ public class Main extends Application {
         Master master = new Master(creator, controller);
 
         primaryStage.setTitle("BattleshipFX");
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 1000, 600);
 
         master.play();
 

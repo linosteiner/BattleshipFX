@@ -11,8 +11,8 @@ public class FieldCreator {
 
     private Controller controller;
     private Scene scene;
-    private int height;
-    private int width;
+    private int height = 10;
+    private int width = 10;
 
 
 
@@ -45,9 +45,7 @@ public class FieldCreator {
         button1.setPrefWidth(30.0);
         button1.setPrefHeight(30.0);
         button1.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
-        button1.setOnAction(e ->{
-            ((Button)e.getSource()).setText("X");
-        });
+        button1.setOnAction(e -> ((Button)e.getSource()).setText("X"));
         pane1.add(button1,i,j);
     }
 

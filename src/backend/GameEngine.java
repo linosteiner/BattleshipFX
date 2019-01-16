@@ -26,8 +26,6 @@ public class GameEngine {
         selectPlayer1();
         selectPlayer2();
 
-        chooseFieldSize();
-
         createField1();
         createField2();
 
@@ -46,12 +44,9 @@ public class GameEngine {
 
     }
 
-    private void chooseFieldSize(){
-
-        //TODO: Popup to choose difficulty
-        creator.setHeight(10);
-        creator.setWidth(10);
-
+    public void chooseDifficulty(int h, int w){
+        creator.setHeight(h);
+        creator.setWidth(w);
 
     }
 
