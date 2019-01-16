@@ -1,3 +1,5 @@
+package main;
+
 import backend.GameEngine;
 import backend.Ranking;
 import frontend.Controller;
