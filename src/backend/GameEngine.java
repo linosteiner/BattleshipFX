@@ -19,6 +19,7 @@ public class GameEngine {
     public GameEngine(Controller controller, FieldCreator creator) {
         this.controller = controller;
         this.creator = creator;
+        controller.setEngine(this);
     }
 
     public void newGame(){
@@ -27,7 +28,6 @@ public class GameEngine {
         selectPlayer2();
 
         chooseFieldSize();
-
 
         createField1();
         createField2();

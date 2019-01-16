@@ -23,30 +23,6 @@ public class FieldCreator {
         this.controller = controller;
     }
 
-    public void createField(int h, int v){
-
-        GridPane pane1 = new GridPane();
-        GridPane pane2 = new GridPane();
-
-        for (int i = 0; i < v ; i++) {
-
-            for (int j = 0; j < h ; j++) {
-
-                Button button1 = new Button("X");
-                button1.setPrefWidth(20.0);
-                pane1.add(button1,i,j);
-
-                Button button2 = new Button("X");
-                button2.setPrefWidth(20.0);
-                pane2.add(button2,i,j);
-            }
-        }
-
-        controller.setField1(pane1);
-        controller.setField2(pane2);
-
-    }
-
     public void createGUIFields(Player player){
 
         GridPane pane1 = new GridPane();
@@ -56,12 +32,22 @@ public class FieldCreator {
 
             for (int j = 0; j < height ; j++) {
 
-                Button button1 = new Button("X");
-                button1.setPrefWidth(20.0);
+                Button button1 = new Button("O");
+                button1.setPrefWidth(30.0);
+                button1.setPrefHeight(30.0);
+                button1.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
+                button1.setOnAction(e->{
+                    ((Button)e.getSource()).setText("X");
+                });
                 pane1.add(button1,i,j);
 
-                Button button2 = new Button("X");
-                button2.setPrefWidth(20.0);
+                Button button2 = new Button("O");
+                button2.setPrefWidth(30.0);
+                button2.setPrefHeight(30.0);
+                button2.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
+                button2.setOnAction(e->{
+                    ((Button)e.getSource()).setText("X");
+                });
                 pane2.add(button2,i,j);
             }
         }

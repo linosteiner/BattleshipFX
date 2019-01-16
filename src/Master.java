@@ -23,6 +23,7 @@ public class Master {
 
     public void play(){
 
+        gameEngine.newGame();
     }
 
     public void showRanking(){
