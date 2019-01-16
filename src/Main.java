@@ -25,7 +25,7 @@ public class Main extends Application {
         primaryStage.setTitle("BattleshipFX");
         Scene scene = new Scene(root, 600, 400);
 
-        creator.createField(10,10);
+        master.play();
 
         primaryStage.setScene(scene);
         primaryStage.show();
