@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../frontend/controller.fxml"));
+        FXMLLoader loader = new FXMLLoader(Controller.class.getResource("controller.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
         FieldCreator creator = new FieldCreator(primaryStage, controller);
