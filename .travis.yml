@@ -4,15 +4,21 @@ jdk: oraclejdk8
 before_script:
   - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
 
+before_deploy:
+  - git config --local user.name "linosteiner"
+  - git config --local user.email "linosteiner@users.noreply.github.com"
+  - export GIT_TAG=$TRAVIS_BRANCH-v0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
 
 deploy:
-  when: manual
   provider: releases
   api_key: $GH_TOKEN
-  file: target/battleship.jar
+  file: out/artifacts/BattleshipFX/BattleshipFX.jar
   skip_cleanup: true
   on:
     tags: true
+
+
 
 cache:
   directories:
