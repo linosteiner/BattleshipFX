@@ -1,9 +1,13 @@
 language: java
 jdk: oraclejdk8
 
+before_script:
+  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+
 deploy:
+  when: manual
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key: $GH_TOKEN
   file: target/battleship.jar
   skip_cleanup: true
   on:
