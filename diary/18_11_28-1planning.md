@@ -3,9 +3,10 @@ ProductOwner: Eric Püschel
 ScrumMaster: Ronald Studer
 
 * Produkt Besprechung
-* Product Backlog definieren
+* Product Backlog tasks besprechen
 * Aufgaben kategorisieren
 * To Do's für Sprint 1 definiert
 * Prioriserung der Issues
 * Zuteilung der Aufgaben
+* Mockups designen
 
