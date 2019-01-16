@@ -4,7 +4,7 @@ import backend.Player;
 
 import java.util.ArrayList;
 
-public interface Schneeger {
+public interface iKing {
 
     int registerNewPlayer();
     int updateStats();

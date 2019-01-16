@@ -19,22 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `schiffeversenken`
+-- Datenbank: 'schiffeversenken'
 --
 
-create database `schneeger`;
-use `schneeger`;
+create database 'battelship_data';
+use 'battelship_data';
 
 --
--- Tabellenstruktur für Tabelle `Spieler`
+-- Tabellenstruktur für Tabelle 'Spieler'
 --
 
-CREATE TABLE `spieler` (
-  `Spieler_ID` int(10) NOT NULL,
-  `Username` varchar(50) NOT NULL,
-  `Anzahl_Spiele` int(10) NOT NULL,
-  `Siege` int(10) NOT NULL,
-  `Niederlagen` int(10) NOT NULL
+CREATE TABLE 'spieler' (
+  'Spieler_ID' int(10) NOT NULL,
+  'Username' varchar(50) NOT NULL,
+  'Anzahl_Spiele' int(10) NOT NULL,
+  'Siege' int(10) NOT NULL,
+  'Niederlagen' int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -42,20 +42,20 @@ CREATE TABLE `spieler` (
 --
 
 --
--- Indizes für die Tabelle `Spieler`
+-- Indizes für die Tabelle 'Spieler'
 --
-ALTER TABLE `Spieler`
-  ADD PRIMARY KEY (`Spieler_ID`);
+ALTER TABLE 'Spieler'
+  ADD PRIMARY KEY ('Spieler_ID');
 
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
 --
--- AUTO_INCREMENT für Tabelle `Spieler`
+-- AUTO_INCREMENT für Tabelle 'Spieler'
 --
-ALTER TABLE `Spieler`
-  MODIFY `Spieler_ID` int(10) NOT NULL AUTO_INCREMENT;
+ALTER TABLE 'Spieler'
+  MODIFY 'Spieler_ID' int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
