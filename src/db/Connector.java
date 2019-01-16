@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Connector {
+class Connector {
 
     private static Connector instance = null;
     private Connection con = null;
@@ -12,19 +12,19 @@ public class Connector {
     private Connector() {
     }
 
-    public Connection getConnection()
+    Connection getConnection()
     {
         return this.con;
     }
 
-    public static Connector getInstance()
+    static Connector getInstance()
     {
         if (instance == null)
             instance = new Connector();
         return instance;
     }
 
-    public void openConnection()
+    void openConnection()
     {
         try {
             if(this.con == null || this.con.isClosed()) {
@@ -36,12 +36,11 @@ public class Connector {
         }
     }
 
-    public void closeConnection()
+    void closeConnection()
     {
         try {
-            if(this.con != null || !this.con.isClosed()) {
-                this.con.close();
-            }
+            assert this.con != null;
+            this.con.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -10,18 +10,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private FieldCreator creator;
-    private Controller controller;
-    private Master master;
-
     @Override
     public void start(Stage primaryStage) throws Exception{
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../frontend/controller.fxml"));
         Parent root = loader.load();
-        controller = loader.getController();
-        creator = new FieldCreator(primaryStage, controller);
-        master = new Master(creator, controller);
+        Controller controller = loader.getController();
+        FieldCreator creator = new FieldCreator(primaryStage, controller);
+        Master master = new Master(creator, controller);
 
         primaryStage.setTitle("BattleshipFX");
         Scene scene = new Scene(root, 800, 600);

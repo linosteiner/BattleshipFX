@@ -7,23 +7,17 @@ import frontend.FieldCreator;
 
 public class Master {
 
-    private FieldCreator creator;
-    private Controller controller;
-
     private GameEngine gameEngine;
-    private Ranking ranking;
 
 
-    public Master(FieldCreator creator, Controller controller) {
-        this.creator = creator;
-        this.controller = controller;
+    Master(FieldCreator creator, Controller controller) {
 
         gameEngine = new GameEngine(controller, creator);
-        ranking = new Ranking();
+        Ranking ranking = new Ranking();
     }
 
 
-    public void play(){
+    void play(){
 
         gameEngine.newGame();
     }

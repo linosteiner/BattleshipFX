@@ -1,6 +1,7 @@
 package frontend;
 
 import backend.Player;
+import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
@@ -10,7 +11,6 @@ import java.io.IOException;
 
 public class FieldCreator {
 
-    private Stage stage;
     private Controller controller;
     private Scene scene;
     private int height;
@@ -18,8 +18,7 @@ public class FieldCreator {
 
 
 
-    public FieldCreator(Stage stage, Controller controller) throws IOException {
-        this.stage = stage;
+    public FieldCreator(Stage stage, Controller controller) {
         this.controller = controller;
     }
 
@@ -32,29 +31,26 @@ public class FieldCreator {
 
             for (int j = 0; j < height ; j++) {
 
-                Button button1 = new Button("O");
-                button1.setPrefWidth(30.0);
-                button1.setPrefHeight(30.0);
-                button1.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
-                button1.setOnAction(e->{
-                    ((Button)e.getSource()).setText("X");
-                });
-                pane1.add(button1,i,j);
+                createButton(pane1, i, j);
 
-                Button button2 = new Button("O");
-                button2.setPrefWidth(30.0);
-                button2.setPrefHeight(30.0);
-                button2.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
-                button2.setOnAction(e->{
-                    ((Button)e.getSource()).setText("X");
-                });
-                pane2.add(button2,i,j);
+                createButton(pane2, i, j);
             }
         }
 
         controller.setField1(pane1);
         controller.setField2(pane2);
 
+    }
+
+    private void createButton(GridPane pane1, int i, int j) {
+        Button button1 = new Button("O");
+        button1.setPrefWidth(30.0);
+        button1.setPrefHeight(30.0);
+        button1.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
+        button1.setOnAction(e ->{
+            ((Button)e.getSource()).setText("X");
+        });
+        pane1.add(button1,i,j);
     }
 
 

@@ -30,7 +30,7 @@ public class Controller {
         return field1;
     }
 
-    public void setField1(Pane newField) {
+    void setField1(Pane newField) {
         field1.getChildren().clear();
         field1.getChildren().add(newField);
     }
@@ -39,7 +39,7 @@ public class Controller {
         return field2;
     }
 
-    public void setField2(Pane newField) {
+    void setField2(Pane newField) {
         field2.getChildren().clear();
         field2.getChildren().add(newField);
     }
