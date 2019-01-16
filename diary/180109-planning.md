@@ -1,6 +1,6 @@
 # Scrum Planning Meeting 9.1.19
-ProductOwner: Tiago
-ScrumMaster: Lino
+ProductOwner: Tiago Kiener
+ScrumMaster: Lino Steiner
 
 - Punkte vom Bewertungsraster gezielt erfüllen
   - Burndown Chart (3x Sprint + Product)
@@ -10,4 +10,4 @@ ScrumMaster: Lino
   - CI/CD (Travis CI) 
   - Präsentation
   - Code kommentieren
-  - CODE schreiben
+  - Code schreiben
