@@ -1,9 +1,27 @@
-Daily Review & Retrospektive 05.12.18
+
+#  Sprint Review & Retrospektive 05.12.2018
 ProductOwner: Ronald Studer ScrumMaster: Tiago Kiener
 
-Review
-Wir haben dem Product Owner unsere Fortschritte vorgestellt und die Resultate.
-Er war zufrieden und hat diese akzeptiert, ohne einen Einwand.
+#   Retrospektive
 
-Retrospektive
-Damit wir schneller vorankommen, werden wir nicht mehr zu zweit an einem Task arbeiten. Es sei den es ist notwendig.
+##  Positives
+- Gute Gespräche
+- Gute Vorschläge
+- Anfänglich produktiv
+- Gute Projektidee
+- Brainstorming
+- Neue Tools
+
+##  Negatives
+- Zu wenig Issues erledigt/bearbeitet
+- Kein roter Faden im Prozess
+- Fehlende Konzentration (Ablenkung durch andere Personen)
+
+##  Ziele nächster Sprint
+- Jeder erledigt min. einen (1) produktiven Issue
+- Mehr Konzentration
+
+
+#   Review
+
+Wir haben unser fertiges Produkt dem Product Owner gezeigt und er war zufrieden. Jedoch liegt mer drin und die Abgegebene Menge könnte grösser sein. Daher versuchen wir im nächsten Sprint mehr zu erreichen. 
