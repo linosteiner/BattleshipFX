@@ -1,10 +1,13 @@
 package frontend;
 
+import backend.GameEngine;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
 public class Controller {
+
+    private GameEngine engine;
 
     @FXML
     private Pane field1;
@@ -18,6 +21,10 @@ public class Controller {
     @FXML
     private Pane legend2;
 
+
+    public void setEngine(GameEngine engine) {
+        this.engine = engine;
+    }
 
     public Pane getField1() {
         return field1;
@@ -57,4 +64,10 @@ public class Controller {
     private void close(){
         Platform.exit();
     }
+
+    @FXML
+    private void newGame(){
+        engine.newGame();
+    }
+
 }
