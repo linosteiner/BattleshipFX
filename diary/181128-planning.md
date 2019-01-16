@@ -2,5 +2,6 @@
 ProductOwner: Eric  
 ScrumMaster: Rony
 
-* To Do's für Sprint 1 definiert
-* Prioriserung der Issues
+- To Do's für Sprint 1 definiert
+- Prioriserung der Issues
+
