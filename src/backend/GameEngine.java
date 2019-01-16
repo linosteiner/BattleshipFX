@@ -2,7 +2,6 @@ package backend;
 
 import frontend.Controller;
 import frontend.FieldCreator;
-import javafx.scene.Scene;
 
 public class GameEngine {
 

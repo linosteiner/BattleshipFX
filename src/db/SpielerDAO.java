@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class SpielerDAO implements IKing {
+public class SpielerDAO implements ISpielerDAO {
     private Connection con = null;
     private ResultSet rs;
     private PreparedStatement ps;
