@@ -6,7 +6,7 @@ before_deploy:
   - git config --local user.email "linosteiner@users.noreply.github.com"
   - export GIT_TAG=$TRAVIS_BRANCH-v0.1.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push https://github.com/linosteiner/BattleshipFX --tags
+  - git push origin --tags
 
 
 deploy:
@@ -15,6 +15,7 @@ deploy:
   file: out/artifacts/BattleshipFX/BattleshipFX.jar
   skip_cleanup: true
   on:
+    branch: master
     tags: true
 
 
