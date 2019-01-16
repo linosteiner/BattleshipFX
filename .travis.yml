@@ -1,9 +1,6 @@
 language: java
 jdk: oraclejdk8
 
-before_script:
-  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
-
 before_deploy:
   - git config --local user.name "linosteiner"
   - git config --local user.email "linosteiner@users.noreply.github.com"
