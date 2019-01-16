@@ -44,7 +44,7 @@ CREATE TABLE 'spieler' (
 --
 -- Indizes für die Tabelle 'Spieler'
 --
-ALTER TABLE 'Spieler'
+ALTER TABLE 'spieler'
   ADD PRIMARY KEY ('Spieler_ID');
 
 --
@@ -54,7 +54,7 @@ ALTER TABLE 'Spieler'
 --
 -- AUTO_INCREMENT für Tabelle 'Spieler'
 --
-ALTER TABLE 'Spieler'
+ALTER TABLE 'spieler'
   MODIFY 'Spieler_ID' int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

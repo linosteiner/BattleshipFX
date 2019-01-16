@@ -4,7 +4,7 @@ import backend.Player;
 
 import java.util.ArrayList;
 
-public interface IKing {
+public interface ISpielerDAO {
 
     int registerNewPlayer();
     int updateStats();
