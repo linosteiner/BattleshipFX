@@ -10,53 +10,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="frontend.Controller">
    <top>
-      <MenuBar fx:id="close" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="Game">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#newGame" text="New" />
-                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+       <MenuBar fx:id="close" BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="Game">
+               <MenuItem mnemonicParsing="false" onAction="#newGame" text="New"/>
+               <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Edit">
+               <MenuItem mnemonicParsing="false" text="Delete"/>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" text="About"/>
+           </Menu>
+       </MenuBar>
    </top>
    <center>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox HBox.hgrow="ALWAYS">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="My Ships" />
-                  <Pane fx:id="field1" prefHeight="400.0" prefWidth="200.0" />
-                  <Pane fx:id="legend1" prefHeight="200.0" prefWidth="200.0" />
-               </children>
+       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <VBox HBox.hgrow="ALWAYS">
                <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
                </padding>
-            </VBox>
-            <VBox HBox.hgrow="ALWAYS">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Ships" />
-                  <Pane fx:id="field2" prefHeight="400.0" prefWidth="200.0" />
-                  <Pane fx:id="legend2" prefHeight="200.0" prefWidth="200.0" />
-               </children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="My Ships"/>
+               <Pane fx:id="field1" prefHeight="400.0" prefWidth="200.0"/>
+               <Pane fx:id="legend1" prefHeight="200.0" prefWidth="200.0"/>
+           </VBox>
+           <VBox HBox.hgrow="ALWAYS">
                <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
                </padding>
-            </VBox>
-         </children>
-      </HBox>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Ships"/>
+               <Pane fx:id="field2" prefHeight="400.0" prefWidth="200.0"/>
+               <Pane fx:id="legend2" prefHeight="200.0" prefWidth="200.0"/>
+           </VBox>
+       </HBox>
    </center>
 </BorderPane>
