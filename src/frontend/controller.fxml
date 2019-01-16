@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="frontend.Controller">
    <top>
        <MenuBar fx:id="close" BorderPane.alignment="CENTER">
            <Menu mnemonicParsing="false" text="Game">
