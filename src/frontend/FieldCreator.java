@@ -32,12 +32,22 @@ public class FieldCreator {
 
             for (int j = 0; j < height ; j++) {
 
-                Button button1 = new Button("X");
-                button1.setPrefWidth(20.0);
+                Button button1 = new Button("O");
+                button1.setPrefWidth(30.0);
+                button1.setPrefHeight(30.0);
+                button1.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
+                button1.setOnAction(e->{
+                    ((Button)e.getSource()).setText("X");
+                });
                 pane1.add(button1,i,j);
 
-                Button button2 = new Button("X");
-                button2.setPrefWidth(20.0);
+                Button button2 = new Button("O");
+                button2.setPrefWidth(30.0);
+                button2.setPrefHeight(30.0);
+                button2.setMinSize(Button.USE_PREF_SIZE, Button.USE_PREF_SIZE);
+                button2.setOnAction(e->{
+                    ((Button)e.getSource()).setText("X");
+                });
                 pane2.add(button2,i,j);
             }
         }

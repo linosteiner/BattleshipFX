@@ -28,7 +28,6 @@ public class GameEngine {
 
         chooseFieldSize();
 
-
         createField1();
         createField2();
 
